@@ -1,0 +1,20 @@
+service: nestjs-aws-serverless-start
+frameworkVersion: "3"
+useDotenv: true
+plugins:
+  - serverless-plugin-typescript
+  - serverless-plugin-optimize
+  - serverless-offline
+
+provider:
+  name: aws
+  region: eu-west-3
+  runtime: nodejs18.x
+
+functions:
+  main3:
+    handler: src/lambda.handler
+    events:
+      - http:
+          path: '/{any+}'
+          method: ANY
