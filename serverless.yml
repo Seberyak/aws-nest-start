@@ -1,6 +1,7 @@
 org: valera
 app: nestjs-aws-serverless-start
 service: nestjs-aws-serverless-start
+
 frameworkVersion: "3"
 useDotenv: true
 plugins:
@@ -12,6 +13,7 @@ provider:
   name: aws
   region: eu-west-3
   runtime: nodejs18.x
+
 
 functions:
   main:
