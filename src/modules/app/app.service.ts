@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
 import { DocumentClient } from 'aws-sdk/clients/dynamodb';
-import { Connection } from '@typedorm/core';
 
 @Injectable()
 export class AppService {

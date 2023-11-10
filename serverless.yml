@@ -1,3 +1,5 @@
+org: valera
+app: nestjs-aws-serverless-start
 service: nestjs-aws-serverless-start
 frameworkVersion: "3"
 useDotenv: true
