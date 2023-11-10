@@ -6,10 +6,7 @@ export class AppService {
   constructor(private readonly db: DocumentClient) {}
   async getHello(): Promise<any> {
     const res = await this.db.scan({ TableName: 'TestTable' }).promise();
-    return res.Items;
 
-    // return 'Hello World!';
+    return { data: res.Items, status: 200, success: true };
   }
-
-  async test() {}
 }
