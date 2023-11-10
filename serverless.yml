@@ -12,7 +12,7 @@ provider:
   runtime: nodejs18.x
 
 functions:
-  main3:
+  main:
     handler: src/lambda.handler
     events:
       - http:

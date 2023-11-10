@@ -9,7 +9,7 @@ export class AppController {
 
   @ApiResponse({ status: 200, description: 'Returns hello world' })
   @Get()
-  getHello(): string {
+  getHello(): Promise<any> {
     return this.appService.getHello();
   }
 }

@@ -1,7 +1,13 @@
-import { Module } from '@nestjs/common';
-import { DynamoDbService } from './dynamo-db.service';
+import { Module, Provider } from '@nestjs/common';
+import { DocumentClient } from 'aws-sdk/clients/dynamodb';
+
+const dynamoDB: Provider = {
+  provide: DocumentClient,
+  useValue: new DocumentClient(),
+};
 
 @Module({
-  providers: [DynamoDbService]
+  providers: [dynamoDB],
+  exports: [dynamoDB],
 })
 export class DynamoDbModule {}
